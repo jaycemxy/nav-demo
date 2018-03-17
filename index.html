@@ -38,14 +38,14 @@
             return document.createElement(tagName)
         }
 
-        function creatSpan(textContent) {
+        function createSpan(textContent) {
             var span = tag('span')
             span.textContent = textContent
             span.className = "text"
             return span
         }
 
-        function creatButton(id) {
+        function createButton(id) {
             var button = tag('button')
             button.textContent = '编辑'
             button.id = id
@@ -65,7 +65,7 @@
             return button
         }
 
-        function creatImage(domain) {
+        function createImage(domain) {
             var img = tag('img')
             if (domain) {
                 img.src = 'http://' + domain + '/favicon.ico'
