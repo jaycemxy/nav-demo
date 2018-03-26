@@ -1,65 +1,161 @@
-*{margin: 0; padding: 0;}
-a{text-decoration: none;}
-kbd{border: 1px solid red; width: 4em; height: 4em;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header {
+    min-width: 780px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 29px 40px;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 2px 9px 3px rgba(0, 0, 0, 0.3);
+}
+
+header .wrap-search {
+    float: right;
+    margin-right: 150px;
+}
+
+header ul input,
+header ul span {
+    float: left;
+    margin-right: 15px;
+}
+
+header input {
+    display: inline-block;
+    background: #555555;
+    border: none;
+    padding: 11px;
+    border-radius: 5px;
+    height: 32px;
+    width: 200px;
+    color: #fff;
+}
+
+header .search {
+    color: #fff;
+    background: #555555;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 7.5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+kbd {
+    border: 1px solid red;
+    width: 4em;
+    height: 4em;
     display: inline-block;
     text-transform: uppercase;
     position: relative;
 }
-kbd > button{
+
+kbd>button {
     position: absolute;
     right: 0;
     bottom: 0;
     display: none;
 }
-kbd:hover > button{
+
+kbd:hover>button {
     display: inline-block;
-} 
-body{
+}
+
+body {
     background: grey url(./wall.jpg) no-repeat center center;
     background-size: cover;
 }
-main{
+
+main {
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    box-sizing: border-box;
 }
-#main{
-    display: inline-block;;
-}    
-#main> div:nth-child(2){
+
+#main {
+    display: inline-block;
+    ;
+}
+
+#main>div:nth-child(2) {
     margin-left: -22px;
-}    
-#main> div:nth-child(3){
+}
+
+#main>div:nth-child(3) {
     margin-left: -80px;
 }
-.wrapper{
-    background: rgba(255,255,255,0.2);
+
+.wrapper {
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     height: 206px;
     width: 760px;
 }
-.key{width: 50px; height: 40px; background: linear-gradient(to bottom, #292929 0%,#111111 100%); 
-    border: 1px solid #373737; color: #c5c5c5; border-radius: 6px; 
-    box-shadow: 0 0 0 1px #1a1b1c, 0 0 0 2px #1f2020, 0 3px 0 2px #080808; 
-    font-size: 16px; font-family: Helvetica;
+
+.wrapper kbd:hover {
+    box-shadow: 0 2px 9px 3px rgba(0, 0, 0, 0.3);
+    position: relative;
+    top: 0;
+    left: 0;
+    animation: 0.2s move forwards;
+  }
+  @keyframes move {
+    from {
+      top: 0
+    }
+    to {
+      top: 3px;
+    }
+  }
+
+.key {
+    width: 50px;
+    height: 40px;
+    background: linear-gradient(to bottom, #292929 0%, #111111 100%);
+    border: 1px solid #373737;
+    color: #c5c5c5;
+    border-radius: 6px;
+    box-shadow: 0 0 0 1px #1a1b1c, 0 0 0 2px #1f2020, 0 3px 0 2px #080808;
+    font-size: 16px;
+    font-family: Helvetica;
     position: relative;
 }
-.row{
+
+.row {
     margin: 20px;
 }
-.row .key{
+
+.row .key {
     margin: 0 10px;
 }
-.key img{
+
+.key img {
     width: 16px;
     height: 16px;
     position: absolute;
     left: 4px;
     bottom: 2px;
 }
-.key .text{
+
+.key .text {
     position: absolute;
     left: 4px;
     top: 2px;
