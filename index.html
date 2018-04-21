@@ -36,6 +36,12 @@
         //3、监听用户动作
         listenToUser(hash)
 
+        // 4、当输入框聚焦的时候取消事件监听，失焦时候重新监听
+        blockKeyboardEventsWhenEntering();
+
+        // 5、绑定【百度一下】与【谷歌一下】的事件
+        bindSearchEvent();
+
 
         //下面是工具函数
         function getFromLocalStorage(name) {
@@ -199,6 +205,40 @@
                 //location.href = 'http://'+website
                 window.open('http://' + website, '_blank')
             }
+        }
+
+        function blockKeyboardEventsWhenEntering() {
+            const input = document.querySelector('.arguments');
+            input.addEventListener('focus', (e) => {
+                document.onkeypress = null;
+            });
+            input.addEventListener('blur', (e) => {
+                listenToUser(hash);
+            })
+        }
+
+        function bindSearchEvent() {
+            const baidu = document.querySelector('.baidu');
+            const google = document.querySelector('.google');
+            const input = document.querySelector('.arguments');
+
+            baidu.addEventListener('click', (e) => {
+                if (!input.value) {
+                    alert('请输入内容后点击');
+                    return;
+                }
+
+                window.open(`https://www.baidu.com/s?wd=${input.value}`, '_blank')
+            });
+
+            google.addEventListener('click', (e) => {
+                if (!input.value) {
+                    alert('请输入内容后点击');
+                    return;
+                }
+
+                window.open(`https://www.google.com/search?q=${input.value}`, '_blank')
+            })            
         }
     </script>
 </body>
