@@ -17,7 +17,7 @@
             </div>
         </ul>
     </header>
-    
+
     <main>
         <div class="wrapper" id="main">
         </div>
@@ -41,6 +41,9 @@
 
         // 5、绑定【百度一下】与【谷歌一下】的事件
         bindSearchEvent();
+
+        // 6、增加用户点击事件
+        addKeyPressEvent();
 
 
         //下面是工具函数
@@ -238,8 +241,11 @@
                 }
 
                 window.open(`https://www.google.com/search?q=${input.value}`, '_blank')
-            })            
+            })
         }
+
+        function addKeyPressEvent() {}
+
     </script>
 </body>
 
