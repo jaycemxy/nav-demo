@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+header {
+  min-width: 780px;
+  text-align: center;
+  background: #00000080;
+  padding: 29px 40px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  box-shadow: 0 2px 9px 3px #0000004d;
+}
+
+header .wrap-search {
+  float: right;
+  margin-right: 150px;
+}
+
+header ul input, header ul span {
+  float: left;
+  margin-right: 15px;
+}
+
+header input {
+  height: 32px;
+  width: 200px;
+  color: #fff;
+  background: #555;
+  border: none;
+  border-radius: 5px;
+  padding: 11px;
+  display: inline-block;
+}
+
+header .search {
+  color: #fff;
+  cursor: pointer;
+  background: #555;
+  border-radius: 5px;
+  padding: 7.5px;
+  font-size: 12px;
+  display: inline-block;
+}
+
+kbd {
+  width: 4em;
+  height: 4em;
+  text-transform: uppercase;
+  border: 1px solid red;
+  display: inline-block;
+  position: relative;
+}
+
+kbd > button {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+kbd:hover > button {
+  display: inline-block;
+}
+
+body {
+  background: gray url("wall.b1df144f.jpg") center / cover no-repeat;
+}
+
+main {
+  text-align: center;
+  height: 100vh;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#main {
+  display: inline-block;
+}
+
+#main > div:nth-child(2) {
+  margin-left: -22px;
+}
+
+#main > div:nth-child(3) {
+  margin-left: -80px;
+}
+
+.wrapper {
+  height: 206px;
+  width: 760px;
+  background: #fff3;
+  border-radius: 10px;
+}
+
+.wrapper kbd:hover {
+  animation: move .2s forwards;
+  position: relative;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 9px 3px #0000004d;
+}
+
+@keyframes move {
+  from {
+    top: 0;
+  }
+
+  to {
+    top: 3px;
+  }
+}
+
+.key {
+  width: 50px;
+  height: 40px;
+  color: #c5c5c5;
+  background: linear-gradient(#292929 0%, #111 100%);
+  border: 1px solid #373737;
+  border-radius: 6px;
+  font-family: Helvetica;
+  font-size: 16px;
+  position: relative;
+  box-shadow: 0 0 0 1px #1a1b1c, 0 0 0 2px #1f2020, 0 3px 0 2px #080808;
+}
+
+.row {
+  margin: 20px;
+}
+
+.row .key {
+  margin: 0 10px;
+}
+
+.key img {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  bottom: 2px;
+  left: 4px;
+}
+
+.key .text {
+  position: absolute;
+  top: 2px;
+  left: 4px;
+}
+
+/*# sourceMappingURL=index.2cdaf7bc.css.map */
